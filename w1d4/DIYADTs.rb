@@ -3,9 +3,9 @@ class Stack
     @stack = []
   end
 
-  def add(el)
-    @stack.push(el)
-    el
+  def add(ele)
+    @stack.push(ele)
+    ele
   end
 
   def remove
@@ -16,4 +16,23 @@ class Stack
     @stack.dup
   end
 
+end
+
+class Queue
+  def initialize
+    @queue = []
+  end
+
+  def enqueue(ele)
+    @queue.unshift(ele)
+    ele
+  end
+
+  def dequeue
+    @queue.pop
+  end
+
+  def show
+    @queue.dup
+  end
 end
