@@ -36,3 +36,37 @@ class Queue
     @queue.dup
   end
 end
+
+class Tree
+  def initialize
+    @map = []
+  end
+
+  def assign(key, value)
+    
+  end
+
+  def lookup(key)
+
+  end
+
+  def remove(key)
+
+  end
+
+  def show
+    deep_dup(@map)
+  end
+end
+
+def deep_dup
+  copied_array = []
+  self.each do |el|
+    if !el.is_a?(Array)
+      copied_array << el
+    else
+      copied_array << el.deep_dup
+    end
+  end
+  copied_array
+end
